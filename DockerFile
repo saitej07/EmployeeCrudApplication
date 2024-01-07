@@ -1,0 +1,4 @@
+From openjdk:8
+EXPOSE 8080
+ADD target/EmployeeCrud.jar EmployeeCrud.jar
+ENTRYPOINT [ "java","-jar","/EmployeeCud.jar" ]
