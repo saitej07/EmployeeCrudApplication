@@ -1,4 +1,4 @@
-From openjdk:8
+FROM openjdk
+COPY target/*.jar /
 EXPOSE 8080
-ADD target/EmployeeCrud.jar EmployeeCrud.jar
-ENTRYPOINT [ "java","-jar","/EmployeeCud.jar" ]
+ENTRYPOINT [ "java","-jar" ,"/emp-crud-1.0-SNAPSHOT.jar"]
