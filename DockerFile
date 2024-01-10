@@ -1,4 +1,5 @@
-FROM openjdk
-COPY target/*.jar /
-EXPOSE 8080
-ENTRYPOINT [ "java","-jar" ,"/EmployeeCrud-0.0.1-SNAPSHOT.jar"]
+FROM openjdk:11
+ARG JAR_FILE=target/EmployeeCrud-0.0.1-SNAPSHOT.jar
+COPY ${JAR_FILE} EmployeeCrud.jar
+//EXPOSE 8080
+ENTRYPOINT [ "java","-jar" ,"/EmployeeCrud.jar"]
