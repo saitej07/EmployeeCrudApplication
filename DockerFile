@@ -1,4 +1,4 @@
 FROM openjdk:8
-EXPOSE 8000
+EXPOSE 5000
 ADD target/EmployeeCrud.jar EmployeeCrud.jar
 ENTRYPOINT ["java","-jar","EmployeeCrud.jar"]
