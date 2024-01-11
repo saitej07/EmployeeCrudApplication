@@ -1,4 +1,4 @@
-FROM openjdk:11
-ARG JAR_FILE=/var/lib/docker/tmp/buildkit-mount211935149/EmployeeCrud-0.0.1-SNAPSHOT.jar
-COPY ${JAR_FILE} EmployeeCrud.jar
-ENTRYPOINT [ "java","-jar" ,"/EmployeeCrud.jar"]
+FROM openjdk:8
+EXPOSE 8000
+ADD target/EmployeeCrud.jar EmployeeCrud.jar
+ENTRYPOINT ["java","-jar","EmployeeCrud.jar"]
